@@ -1,7 +1,7 @@
 import { Plugin } from 'obsidian';
 
 export default class BookMeterPlugin extends Plugin {
-  public async onload() {
+  public onload() {
     console.log('BookMeter plugin: loading plugin', new Date().toLocaleString());
   }
 
