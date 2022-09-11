@@ -26,6 +26,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.29.0",
 		"@typescript-eslint/parser": "^5.29.0",
 		"builtin-modules": "3.3.0",
+		"copy-webpack-plugin": "^11.0.0",
 		"eslint": "^8.23.0",
 		"obsidian": "latest",
 		"prettier": "^2.7.1",

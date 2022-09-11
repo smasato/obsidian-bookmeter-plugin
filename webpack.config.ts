@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import CopyPlugin from 'copy-webpack-plugin';
 import path from "path";
 import { Configuration, DefinePlugin } from "webpack";
 
@@ -39,6 +40,14 @@ const config: Configuration = {
 		minimizer: [],
 	},
 	plugins: [
+		new CopyPlugin({
+			patterns: [
+				{
+					from: './manifest.json',
+					to: '.',
+				},
+			],
+		}),
 		new DefinePlugin({
 			PACKAGE_NAME: JSON.stringify(pack.name),
 			VERSION: JSON.stringify(releaseVersion),
