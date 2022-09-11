@@ -1,23 +1,24 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "inlineSourceMap": true,
-    "inlineSources": true,
-    "module": "ESNext",
-    "target": "ES6",
-    "allowJs": true,
-    "noImplicitAny": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "isolatedModules": true,
-	"strictNullChecks": true,
-    "lib": [
-      "DOM",
-      "ES5",
-      "ES6",
-      "ES7"
-    ]
-  },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "webpack.config.ts"],
   "exclude": ["node_modules/*"],
+  "compilerOptions": {
+    "lib": ["es2017"],
+		"target": "es2017",
+    "types": ["node"],
+    "baseUrl": ".",
+    "declaration": true,
+		"declarationDir": "types",
+    "paths": {
+      "src": ["src/*"],
+      "~/*": ["src/*"]
+    },
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
 }
