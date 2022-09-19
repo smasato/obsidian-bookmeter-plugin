@@ -3,9 +3,7 @@
   "exclude": ["node_modules/*"],
   "compilerOptions": {
     "types": ["node"],
-    "baseUrl": ".",
-    "declaration": true,
-		"declarationDir": "types",
+    "baseUrl": "./",
     "paths": {
       "src": ["src/*"],
       "~/*": ["src/*"]
